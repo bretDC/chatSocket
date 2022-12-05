@@ -30,7 +30,7 @@ socket.on('locationMessage', (url) => {
 })
 
 
-document.querySelector('#message-form').addEventListener('submit', (e) => {
+$messageForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
     $messageFormButton.setAttribute('disabled', 'disabled')
@@ -50,7 +50,7 @@ document.querySelector('#message-form').addEventListener('submit', (e) => {
     })
 })
 
-document.querySelector('#send-location').addEventListener('click', () => {
+$sendLocationButton.addEventListener('click', () => {
     if (!navigator.geolocation) {
         return alert('Geolocation not supported by your browser')
     }
